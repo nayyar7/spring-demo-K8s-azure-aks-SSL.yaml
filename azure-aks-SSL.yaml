@@ -50,7 +50,7 @@ kind: Ingress
 metadata:
   name: myspringwebapp-ingress
   annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
    
 spec:
   ingressClassName: nginx

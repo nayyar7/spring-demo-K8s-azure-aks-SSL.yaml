@@ -64,4 +64,4 @@ spec:
           service:
             name: myspringwebapp-svc
             port:
-              number: 8443
+              number: 80

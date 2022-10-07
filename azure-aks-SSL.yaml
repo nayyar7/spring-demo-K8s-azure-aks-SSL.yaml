@@ -42,3 +42,25 @@ spec:
       port: 8443
       targetPort: 8443
   type: LoadBalancer
+  
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myspringwebapp-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+   
+spec:
+  rules:
+  - host: myspringwebapp.nayyar.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: edge-application
+            port:
+              number: 80

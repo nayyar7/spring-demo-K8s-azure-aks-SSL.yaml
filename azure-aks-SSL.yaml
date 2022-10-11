@@ -19,7 +19,7 @@ spec:
         - mountPath: /nayyar-folder
           name: azurefileshares
         ports:
-        - containerPort: 8443
+        - containerPort: 8080
       volumes:
         - name: azurefileshares
           azureFile:
@@ -39,8 +39,8 @@ spec:
     app: myspringwebapp
   ports:
     - protocol: TCP
-      port: 8443
-      targetPort: 80
+      port: 80
+      targetPort: 8080
   type: NodePort
   
 ---

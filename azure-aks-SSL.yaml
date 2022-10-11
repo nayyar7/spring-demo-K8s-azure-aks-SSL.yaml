@@ -51,6 +51,7 @@ metadata:
   name: myspringwebapp-ingress
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/app-root: /springwebapp/car/list
    
 spec:
   ingressClassName: nginx
